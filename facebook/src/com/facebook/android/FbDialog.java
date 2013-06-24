@@ -168,6 +168,7 @@ public class FbDialog extends Dialog {
         @Override
         public void onReceivedError(WebView view, int errorCode,
                 String description, String failingUrl) {
+            Util.logd("Facebook-WebView", "Webview failed to load");
             super.onReceivedError(view, errorCode, description, failingUrl);
             mListener.onError(
                     new DialogError(description, errorCode, failingUrl));
@@ -183,6 +184,7 @@ public class FbDialog extends Dialog {
 
         @Override
         public void onPageFinished(WebView view, String url) {
+            Util.logd("Facebook-WebView", "Webview finished loading URL: " + url);
             super.onPageFinished(view, url);
             mSpinner.dismiss();
             /* 

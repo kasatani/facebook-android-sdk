@@ -841,6 +841,11 @@ public class Facebook {
         }
     }
 
+    public void setStatus(int mAuthActivityCode, DialogListener mAuthDialogListener){
+        this.mAuthActivityCode = mAuthActivityCode;
+        this.mAuthDialogListener = mAuthDialogListener;
+    }
+    
     /**
      * @return boolean - whether this object has an non-expired session token
      */
